@@ -1,0 +1,4 @@
+{
+  "outcome": "wrong_position",
+  "caption": "substitute / wrong_position on starcoder-java (gen_substitute): k=12, d=12, Levenshtein 12→12."
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var path = window.location.pathname;
+      var base;
+      if (path.endsWith("/")) {
+        base = path;
+      } else if (/\.[a-z0-9]+$/i.test((path.split("/").pop() || ""))) {
+        base = path.slice(0, path.lastIndexOf("/") + 1);
+      } else {
+        base = path + "/";
+      }
+      var el = document.createElement("base");
+      el.href = base;
+      document.head.appendChild(el);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoIndexer: Flexible-Order Decoding by Training Causal Models on Chains of Edits</title>
+  <meta name="description" content="Chain-of-Edits decoding for flexible-order text generation and repair.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="hero-inner center">
+      <h1 class="hero-title">AutoIndexer</h1>
+      <h2 class="hero-subtitle">Flexible-Order Decoding by Training Causal Models<br>on Chains of Edits</h2>
+      <div class="badge-row">
+        <span class="badge">Flexible-Order Decoding</span>
+        <span class="badge">Active Context Refinement</span>
+        <span class="badge">Chain of Edits</span>
+      </div>
+      <p class="hero-tagline">
+        Train causal LMs on edit trajectories so they can revise earlier text in display order while appending in generation order, preserving ordinary language modeling capability.
+      </p>
+      <p class="hero-repo-link">
+        <a href="https://github.com/AutodeskAILab/autoindexer" target="_blank">Code repository (README)</a>
+      </p>
+      <figure id="figure1" class="hero-figure-card">
+        <img
+          class="hero-figure"
+          src="assets/figure1.png"
+          alt="Figure 1: Chain-of-Edits framework overview"
+          width="2400"
+          height="auto"
+        >
+      </figure>
+      <p class="hero-caption">
+        <strong>Figure 1.</strong> Overview of the AutoIndexer method.
+        AutoIndexer can edit its prior outputs via insertion, substitution, and deletion.
+        The model selects tokens for edits by predicting start and end cursor positions.
+        Positional encodings are updated after each edit and computed efficiently by a specialized attention kernel.
+      </p>
+    </div>
+  </header>
+
+  <div class="page-wrap">
+
+    <hr>
+
+    <section id="abstract">
+      <h1 class="section-title">Abstract</h1>
+      <p class="abstract-text">
+        Autoregressive decoding faces challenges when the data are not causally ordered, e.g., contain cross-references or future dependencies. Furthermore, once tokens are generated, they are fixed and cannot be modified or improved, unlike how humans can iteratively refine their thoughts. While diffusion LLMs partially address this issue, they do not naturally lend themselves to inserting or deleting arbitrary numbers of tokens in a pre-generated context.
+        We design AutoIndexer as a generative model with a novel training and decoding mechanism that simulates a <em>Chain of Edits</em>, allowing the model to flexibly modify its prior outputs in hindsight via token insertions, substitutions, and deletions.
+        The model learns to predict marker tokens for opening and closing edits, simultaneously moving a cursor to positions in the existing token sequence, analogous to a text editor.
+        Training sequences are obtained by perturbing ground-truth labels with inverse chained edit operations, and the model learns to edit by undoing those inverses.
+        The perturbation training allows AutoIndexer to be robust to erroneous context and adaptable to editing tasks such as code correction.
+        We demonstrate that our method exhibits post-generation context-editing capabilities that most autoregressive and diffusion models lack without compromising performance on standard LLM benchmarks.
+      </p>
+    </section>
+
+    <hr>
+
+    <section id="problem">
+      <h1 class="section-title">What problem does AutoIndexer solve?</h1>
+      <p class="section-lead">
+        Left-to-right decoders commit to an immutable prefix. Revising earlier text usually means discarding the KV cache and regenerating.
+        AutoIndexer supports <strong>generate → revise earlier text → continue</strong> in a single append-only stream.
+      </p>
+    </section>
+
+    <hr>
+
+    <section id="how-it-works">
+      <h1 class="section-title">How AutoIndexer works</h1>
+      <p class="section-lead">
+        See <a href="#figure1">Figure 1</a> for the full framework. Three ideas:
+      </p>
+      <ul class="bullet-tight">
+        <li><strong>Chain-of-Edits decoding</strong> — the model emits an edit trajectory τ with <span class="token edit-marker">[EDIT]</span> and <span class="token return-marker">[RETURN]</span> markers.</li>
+        <li><strong>Cursor prediction</strong> — a <strong>cursor head</strong> predicts <strong>start cursor</strong> and <strong>end cursor</strong> for each edit.</li>
+        <li><strong>Chain-of-Edits RoPE</strong> — <strong>display-order reassignment</strong> via <strong>cursor-relative position</strong>; keys use <strong>cursor-anchored (key-only) RoPE</strong> while queries use <strong>standard RoPE</strong>.</li>
+      </ul>
+      <div class="callout-grid">
+        <div class="callout"><strong>Generation order</strong> — tokens are appended to the stream (cache-friendly).</div>
+        <div class="callout"><strong>Display order</strong> — reconstructed from the edit trajectory for reading and evaluation.</div>
+        <div class="callout"><strong>Training</strong> — sample corruptions of ground truth <em>x</em> and supervise the model to emit τ.</div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="interactive-demo" class="demo-section">
+      <h1 class="section-title">Interactive demo</h1>
+      <p class="section-lead">Figure 1 toy trajectory: <strong>[@][C]</strong> → two edits. <strong>Start S</strong> is chosen with <span class="token edit-marker">[EDIT]</span>; <strong>end E</strong> on the following step. The blinking bar is the edit cursor in display order.</p>
+
+      <div class="demo-card">
+        <div class="legend">
+          <span>Legend:</span>
+          <span class="token normal">token</span>
+          <span class="token edit-marker">[EDIT]</span>
+          <span class="token inserted">replacement</span>
+          <span class="token return-marker">[RETURN]</span>
+          <span class="token deleted">deleted</span>
+        </div>
+        <p class="demo-step-title" id="inference-step-title"></p>
+        <div class="stream-label">Generation-order tokens (cursor head indices; order is <em>not</em> parser-reordered)</div>
+        <div class="display-lane" id="inference-display-lane" aria-live="polite"></div>
+        <div class="stream-label" id="inference-gen-label">Generation order (append stream)</div>
+        <div class="token-stream" id="inference-gen-stream"></div>
+        <div class="pos-panel" id="inference-pos-panel">
+          <div class="stream-label">Per-token positions (cursor head uses generation order) and RoPE</div>
+          <div id="inference-pos-content"></div>
+          <div id="inference-rope-note" class="demo-note"></div>
+        </div>
+        <p class="demo-note" id="inference-note"></p>
+        <div class="demo-controls">
+          <button type="button" class="demo-btn" id="inference-play">Play</button>
+          <button type="button" class="demo-btn secondary" id="inference-prev">Previous</button>
+          <button type="button" class="demo-btn secondary" id="inference-next">Next</button>
+          <button type="button" class="demo-btn secondary" id="inference-reset">Reset</button>
+          <span id="inference-counter" class="demo-note" style="margin:0;"></span>
+          <label class="demo-toggle">
+            <input type="checkbox" id="show-positions">
+            Show positions
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="qualitative">
+      <h1 class="section-title">Qualitative examples</h1>
+      <div class="qual-grid">
+        <div class="qual-card">
+          <h3>Exact repair</h3>
+          <p>e.g. substitution on a Java import (18/100) or deletion of injected noise in a C++ option string (53/100).</p>
+          <a href="#gallery" onclick="galleryJumpToOutcome('exact_repair');return false;">View in gallery →</a>
+        </div>
+        <div class="qual-card">
+          <h3>Partial repair</h3>
+          <p>Correct span with net improvement but not exact match.</p>
+          <a href="#gallery" onclick="galleryJumpToOutcome('improved');return false;">View in gallery →</a>
+        </div>
+        <div class="qual-card">
+          <h3>Abstention / no edit</h3>
+          <p>Model correctly emits no edit when the draft is already acceptable.</p>
+          <a href="#gallery" onclick="galleryJumpToOutcome('no_edit');return false;">View in gallery →</a>
+        </div>
+        <div class="qual-card">
+          <h3>Failure modes</h3>
+          <p>Wrong cursor placement or edits that increase distance to gold.</p>
+          <a href="#gallery" onclick="galleryJumpToOutcome('wrong_position');return false;">Wrong position</a>
+          ·
+          <a href="#gallery" onclick="galleryJumpToOutcome('worse');return false;">Worse</a>
+        </div>
+      </div>
+      <hr>
+
+      <p class="section-lead">Filter by evaluation mode, edit type, and outcome.</p>
+
+      <div class="gallery-filters">
+        <button type="button" class="filter-btn active" data-filter-group="edit" data-filter-value="all">All edits</button>
+        <button type="button" class="filter-btn" data-filter-group="edit" data-filter-value="insert">Insert</button>
+        <button type="button" class="filter-btn" data-filter-group="edit" data-filter-value="delete">Delete</button>
+        <button type="button" class="filter-btn" data-filter-group="edit" data-filter-value="substitute">Substitute</button>
+        <button type="button" class="filter-btn" data-filter-group="edit" data-filter-value="none">None</button>
+      </div>
+      <div class="gallery-filters">
+        <button type="button" class="filter-btn active" data-filter-group="outcome" data-filter-value="all">All outcomes</button>
+        <button type="button" class="filter-btn" data-filter-group="outcome" data-filter-value="exact_repair">Exact repair</button>
+        <button type="button" class="filter-btn" data-filter-group="outcome" data-filter-value="improved">Improved</button>
+        <button type="button" class="filter-btn" data-filter-group="outcome" data-filter-value="no_edit">No edit</button>
+        <button type="button" class="filter-btn" data-filter-group="outcome" data-filter-value="wrong_position">Wrong position</button>
+        <button type="button" class="filter-btn" data-filter-group="outcome" data-filter-value="worse">Worse</button>
+      </div>
+
+      <div class="gallery" id="main-gallery-grid"></div>
+      <div class="gallery-empty" id="gallery-empty">
+        No GIFs in the manifest yet.
+      </div>
+      <div class="pagination-controls">
+        <button type="button" class="pagination-btn" id="gallery-prev">← Previous</button>
+        <span class="page-info" id="main-page-info">Page 1 of 1</span>
+        <button type="button" class="pagination-btn" id="gallery-next">Next →</button>
+      </div>
+    </section>
+
+    <section id="citation" class="citation-hidden" aria-hidden="true">
+      <h1 class="section-title">Citation</h1>
+      <p class="section-lead">Enable this section after review. BibTeX placeholder:</p>
+      <pre><code>@misc{autoindexer_anonymous,
+  title={AutoIndexer: Flexible-Order Decoding by Training Causal Models on Chains of Edits},
+  year={2026},
+  note={Anonymous submission}
+}</code></pre>
+    </section>
+
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" aria-label="Close">&times;</span>
+    <img id="lightbox-image" class="lightbox-content" alt="">
+    <div id="lightbox-info" class="lightbox-info"></div>
+  </div>
+
+  <script src="js/interactives.js"></script>
+  <script src="assets/gallery/manifest.js"></script>
+  <script>
+    (function () {
+      var manifest = window.GALLERY_MANIFEST;
+      if (!manifest || !manifest.items || !window.fetch) return;
+      var nativeFetch = window.fetch.bind(window);
+      window.fetch = function (input, init) {
+        var url = typeof input === "string" ? input : (input && input.url) || "";
+        if (url.indexOf("manifest.json") !== -1) {
+          return Promise.resolve({
+            ok: true,
+            json: function () { return Promise.resolve(manifest); },
+          });
+        }
+        return nativeFetch(input, init);
+      };
+    })();
+  </script>
+  <script src="js/gallery.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+{
+  "outcome": "worse",
+  "caption": "delete / made_worse on starcoder-python (gen_delete): k=0, d=4, Levenshtein 4→9."
+}

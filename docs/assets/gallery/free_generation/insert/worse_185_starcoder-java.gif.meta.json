@@ -1,0 +1,4 @@
+{
+  "outcome": "worse",
+  "caption": "insert / wrong_content on starcoder-java (gen_insert): k=10, d=0, Levenshtein 10→10."
+}

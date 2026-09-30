@@ -1,0 +1,4 @@
+{
+  "outcome": "exact_repair",
+  "caption": "delete / repaired on dclm-baseline (gen_delete): k=0, d=6, Levenshtein 6→0."
+}

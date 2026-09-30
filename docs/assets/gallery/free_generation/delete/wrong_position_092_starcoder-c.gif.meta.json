@@ -1,0 +1,4 @@
+{
+  "outcome": "wrong_position",
+  "caption": "delete / wrong_position on starcoder-c (gen_delete): k=0, d=8, Levenshtein 8→3."
+}

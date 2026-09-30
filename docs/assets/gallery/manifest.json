@@ -1,0 +1,2804 @@
+{
+  "items": [
+    {
+      "path": "assets/gallery/free_generation/insert/exact_repair_175_starcoder-typescript.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "exact_repair",
+      "caption": "insert / repaired on starcoder-typescript (gen_insert): k=6, d=0, Levenshtein 6\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/exact_repair_176_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "exact_repair",
+      "caption": "insert / repaired on starcoder-javascript (gen_insert): k=6, d=0, Levenshtein 6\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/exact_repair_177_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "exact_repair",
+      "caption": "insert / repaired on starcoder-python (gen_insert): k=4, d=0, Levenshtein 4\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/exact_repair_178_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "exact_repair",
+      "caption": "insert / repaired on starcoder-cpp (gen_insert): k=4, d=0, Levenshtein 4\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/exact_repair_179_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "exact_repair",
+      "caption": "insert / repaired on openwebmath (gen_insert): k=5, d=0, Levenshtein 5\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/exact_repair_180_starcoder-typescript.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "exact_repair",
+      "caption": "insert / repaired on starcoder-typescript (gen_insert): k=6, d=0, Levenshtein 6\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/exact_repair_181_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "exact_repair",
+      "caption": "insert / repaired on starcoder-python (gen_insert): k=5, d=0, Levenshtein 5\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/exact_repair_182_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "exact_repair",
+      "caption": "insert / repaired on starcoder-c (gen_insert): k=7, d=0, Levenshtein 7\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/exact_repair_183_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "exact_repair",
+      "caption": "insert / repaired on starcoder-c (gen_insert): k=7, d=0, Levenshtein 7\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/exact_repair_184_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "exact_repair",
+      "caption": "insert / repaired on starcoder-python (gen_insert): k=4, d=0, Levenshtein 4\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/improved_163_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "improved",
+      "caption": "insert / partial_repair on starcoder-cpp (gen_insert): k=6, d=0, Levenshtein 6\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/improved_164_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "improved",
+      "caption": "insert / partial_repair on starcoder-python (gen_insert): k=8, d=0, Levenshtein 8\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/improved_165_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "improved",
+      "caption": "insert / partial_repair on fineweb-edu (gen_insert): k=12, d=0, Levenshtein 12\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/improved_166_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "improved",
+      "caption": "insert / partial_repair on starcoder-java (gen_insert): k=7, d=0, Levenshtein 7\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/improved_167_starcoder-typescript.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "improved",
+      "caption": "insert / partial_repair on starcoder-typescript (gen_insert): k=3, d=0, Levenshtein 3\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/improved_168_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "improved",
+      "caption": "insert / partial_repair on starcoder-cpp (gen_insert): k=4, d=0, Levenshtein 4\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/improved_169_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "improved",
+      "caption": "insert / partial_repair on starcoder-python (gen_insert): k=6, d=0, Levenshtein 6\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/improved_170_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "improved",
+      "caption": "insert / partial_repair on fineweb-edu (gen_insert): k=7, d=0, Levenshtein 7\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/improved_171_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "improved",
+      "caption": "insert / partial_repair on slimpajama (gen_insert): k=8, d=0, Levenshtein 8\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/improved_172_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "improved",
+      "caption": "insert / partial_repair on starcoder-cpp (gen_insert): k=6, d=0, Levenshtein 6\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/improved_173_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "improved",
+      "caption": "insert / partial_repair on starcoder-c (gen_insert): k=5, d=0, Levenshtein 5\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/improved_174_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "improved",
+      "caption": "insert / partial_repair on starcoder-python (gen_insert): k=4, d=0, Levenshtein 4\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_102_starcoder-shell.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-shell (gen_insert): k=3, d=0, Levenshtein 3\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_103_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on dclm-baseline (gen_insert): k=3, d=0, Levenshtein 3\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_104_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-cpp (gen_insert): k=10, d=0, Levenshtein 10\u219210."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_105_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-go (gen_insert): k=7, d=0, Levenshtein 7\u21927."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_106_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-c (gen_insert): k=5, d=0, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_107_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-python (gen_insert): k=3, d=0, Levenshtein 3\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_108_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-cpp (gen_insert): k=4, d=0, Levenshtein 4\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_109_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-go (gen_insert): k=10, d=0, Levenshtein 10\u219210."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_110_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-c (gen_insert): k=8, d=0, Levenshtein 8\u21928."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_111_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on dclm-baseline (gen_insert): k=5, d=0, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_112_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-c (gen_insert): k=2, d=0, Levenshtein 2\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_113_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on openwebmath (gen_insert): k=6, d=0, Levenshtein 6\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_114_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on openwebmath (gen_insert): k=7, d=0, Levenshtein 7\u21927."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_115_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on dclm-baseline (gen_insert): k=4, d=0, Levenshtein 4\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_116_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-java (gen_insert): k=5, d=0, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_117_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on fineweb-edu (gen_insert): k=3, d=0, Levenshtein 3\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_118_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on openwebmath (gen_insert): k=9, d=0, Levenshtein 9\u21929."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_119_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-javascript (gen_insert): k=5, d=0, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_120_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on openwebmath (gen_insert): k=4, d=0, Levenshtein 4\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_121_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-c (gen_insert): k=2, d=0, Levenshtein 2\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_122_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on openwebmath (gen_insert): k=7, d=0, Levenshtein 7\u21927."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_123_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on dclm-baseline (gen_insert): k=5, d=0, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_124_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-javascript (gen_insert): k=6, d=0, Levenshtein 6\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_125_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-go (gen_insert): k=2, d=0, Levenshtein 2\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_126_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on slimpajama (gen_insert): k=5, d=0, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_127_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-java (gen_insert): k=6, d=0, Levenshtein 6\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_128_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-go (gen_insert): k=3, d=0, Levenshtein 3\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_129_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on fineweb-edu (gen_insert): k=5, d=0, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_130_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-java (gen_insert): k=6, d=0, Levenshtein 6\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_131_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on slimpajama (gen_insert): k=5, d=0, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_132_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on openwebmath (gen_insert): k=6, d=0, Levenshtein 6\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_133_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on openwebmath (gen_insert): k=2, d=0, Levenshtein 2\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_134_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-cpp (gen_insert): k=5, d=0, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_135_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on dclm-baseline (gen_insert): k=6, d=0, Levenshtein 6\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_136_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on openwebmath (gen_insert): k=8, d=0, Levenshtein 8\u21928."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_137_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-javascript (gen_insert): k=3, d=0, Levenshtein 3\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_138_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-java (gen_insert): k=4, d=0, Levenshtein 4\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_139_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on openwebmath (gen_insert): k=3, d=0, Levenshtein 3\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_140_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-python (gen_insert): k=5, d=0, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_141_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-java (gen_insert): k=2, d=0, Levenshtein 2\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_142_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-javascript (gen_insert): k=5, d=0, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_143_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-cpp (gen_insert): k=8, d=0, Levenshtein 8\u21928."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_144_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on slimpajama (gen_insert): k=6, d=0, Levenshtein 6\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_145_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on dclm-baseline (gen_insert): k=5, d=0, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_146_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on openwebmath (gen_insert): k=4, d=0, Levenshtein 4\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_147_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on openwebmath (gen_insert): k=4, d=0, Levenshtein 4\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_148_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-cpp (gen_insert): k=9, d=0, Levenshtein 9\u21929."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_149_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-python (gen_insert): k=4, d=0, Levenshtein 4\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_150_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-java (gen_insert): k=5, d=0, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_151_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-java (gen_insert): k=1, d=0, Levenshtein 1\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_152_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on openwebmath (gen_insert): k=5, d=0, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_153_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on fineweb-edu (gen_insert): k=3, d=0, Levenshtein 3\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_154_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-python (gen_insert): k=6, d=0, Levenshtein 6\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_155_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-go (gen_insert): k=7, d=0, Levenshtein 7\u21927."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_156_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on slimpajama (gen_insert): k=5, d=0, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_157_starcoder-typescript.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-typescript (gen_insert): k=10, d=0, Levenshtein 10\u219210."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/no_edit_158_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "no_edit",
+      "caption": "insert / no_edit on starcoder-java (gen_insert): k=9, d=0, Levenshtein 9\u21929."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/worse_100_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "worse",
+      "caption": "insert / made_worse on starcoder-python (gen_insert): k=8, d=0, Levenshtein 8\u219212."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/worse_101_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "worse",
+      "caption": "insert / made_worse on starcoder-cpp (gen_insert): k=1, d=0, Levenshtein 1\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/worse_159_starcoder-shell.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "worse",
+      "caption": "insert / over_delete on starcoder-shell (gen_insert): k=4, d=0, Levenshtein 4\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/worse_160_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "worse",
+      "caption": "insert / over_delete on starcoder-cpp (gen_insert): k=7, d=0, Levenshtein 7\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/worse_161_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "worse",
+      "caption": "insert / over_delete on openwebmath (gen_insert): k=7, d=0, Levenshtein 7\u21929."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/worse_162_starcoder-shell.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "worse",
+      "caption": "insert / over_delete on starcoder-shell (gen_insert): k=7, d=0, Levenshtein 7\u21929."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/worse_185_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "worse",
+      "caption": "insert / wrong_content on starcoder-java (gen_insert): k=10, d=0, Levenshtein 10\u219210."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/worse_186_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "worse",
+      "caption": "insert / wrong_content on fineweb-edu (gen_insert): k=5, d=0, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/wrong_position_187_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "wrong_position",
+      "caption": "insert / wrong_position on dclm-baseline (gen_insert): k=2, d=0, Levenshtein 2\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/wrong_position_188_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "wrong_position",
+      "caption": "insert / wrong_position on slimpajama (gen_insert): k=3, d=0, Levenshtein 3\u219218."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/wrong_position_189_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "wrong_position",
+      "caption": "insert / wrong_position on starcoder-javascript (gen_insert): k=2, d=0, Levenshtein 2\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/wrong_position_190_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "wrong_position",
+      "caption": "insert / wrong_position on starcoder-c (gen_insert): k=5, d=0, Levenshtein 5\u219212."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/wrong_position_191_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "wrong_position",
+      "caption": "insert / wrong_position on starcoder-c (gen_insert): k=5, d=0, Levenshtein 5\u219210."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/wrong_position_192_starcoder-shell.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "wrong_position",
+      "caption": "insert / wrong_position on starcoder-shell (gen_insert): k=7, d=0, Levenshtein 7\u219210."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/wrong_position_193_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "wrong_position",
+      "caption": "insert / wrong_position on starcoder-cpp (gen_insert): k=8, d=0, Levenshtein 8\u219212."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/wrong_position_194_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "wrong_position",
+      "caption": "insert / wrong_position on starcoder-go (gen_insert): k=11, d=0, Levenshtein 11\u219211."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/wrong_position_195_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "wrong_position",
+      "caption": "insert / wrong_position on openwebmath (gen_insert): k=8, d=0, Levenshtein 8\u219210."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/wrong_position_196_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "wrong_position",
+      "caption": "insert / wrong_position on starcoder-c (gen_insert): k=3, d=0, Levenshtein 3\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/wrong_position_197_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "wrong_position",
+      "caption": "insert / wrong_position on dclm-baseline (gen_insert): k=2, d=0, Levenshtein 2\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/wrong_position_198_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "wrong_position",
+      "caption": "insert / wrong_position on slimpajama (gen_insert): k=5, d=0, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/insert/wrong_position_199_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "insert",
+      "outcome": "wrong_position",
+      "caption": "insert / wrong_position on slimpajama (gen_insert): k=5, d=0, Levenshtein 5\u219211."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_029_starcoder-shell.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-shell (gen_delete): k=0, d=3, Levenshtein 3\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_030_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on dclm-baseline (gen_delete): k=0, d=8, Levenshtein 8\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_031_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-cpp (gen_delete): k=0, d=6, Levenshtein 6\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_032_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-c (gen_delete): k=0, d=2, Levenshtein 2\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_033_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-cpp (gen_delete): k=0, d=6, Levenshtein 6\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_034_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-c (gen_delete): k=0, d=3, Levenshtein 3\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_035_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-java (gen_delete): k=0, d=6, Levenshtein 6\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_036_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on dclm-baseline (gen_delete): k=0, d=7, Levenshtein 7\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_037_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-c (gen_delete): k=0, d=4, Levenshtein 4\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_038_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-javascript (gen_delete): k=0, d=5, Levenshtein 5\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_039_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on openwebmath (gen_delete): k=0, d=6, Levenshtein 6\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_040_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on dclm-baseline (gen_delete): k=0, d=6, Levenshtein 6\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_041_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-python (gen_delete): k=0, d=5, Levenshtein 5\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_042_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-javascript (gen_delete): k=0, d=6, Levenshtein 6\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_043_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on openwebmath (gen_delete): k=0, d=3, Levenshtein 3\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_044_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-c (gen_delete): k=0, d=13, Levenshtein 13\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_045_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-c (gen_delete): k=0, d=6, Levenshtein 6\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_046_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-cpp (gen_delete): k=0, d=6, Levenshtein 6\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_047_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-python (gen_delete): k=0, d=4, Levenshtein 4\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_048_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-cpp (gen_delete): k=0, d=4, Levenshtein 4\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_049_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-go (gen_delete): k=0, d=3, Levenshtein 3\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_050_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-python (gen_delete): k=0, d=4, Levenshtein 4\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_051_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-go (gen_delete): k=0, d=7, Levenshtein 7\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_052_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-java (gen_delete): k=0, d=4, Levenshtein 4\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_053_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on openwebmath (gen_delete): k=0, d=6, Levenshtein 6\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_054_starcoder-typescript.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-typescript (gen_delete): k=0, d=8, Levenshtein 8\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_055_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on openwebmath (gen_delete): k=0, d=6, Levenshtein 6\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_056_starcoder-typescript.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-typescript (gen_delete): k=0, d=4, Levenshtein 4\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_057_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-cpp (gen_delete): k=0, d=2, Levenshtein 2\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_058_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-python (gen_delete): k=0, d=8, Levenshtein 8\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_059_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on dclm-baseline (gen_delete): k=0, d=2, Levenshtein 2\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_060_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-javascript (gen_delete): k=0, d=2, Levenshtein 2\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_061_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-java (gen_delete): k=0, d=5, Levenshtein 5\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_062_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on openwebmath (gen_delete): k=0, d=5, Levenshtein 5\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_063_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-python (gen_delete): k=0, d=3, Levenshtein 3\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_064_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-java (gen_delete): k=0, d=6, Levenshtein 6\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_065_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on openwebmath (gen_delete): k=0, d=5, Levenshtein 5\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_066_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-javascript (gen_delete): k=0, d=2, Levenshtein 2\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_067_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-cpp (gen_delete): k=0, d=6, Levenshtein 6\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_068_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on slimpajama (gen_delete): k=0, d=5, Levenshtein 5\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_069_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on fineweb-edu (gen_delete): k=0, d=1, Levenshtein 1\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_070_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on openwebmath (gen_delete): k=0, d=5, Levenshtein 5\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_071_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-cpp (gen_delete): k=0, d=5, Levenshtein 5\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_072_starcoder-shell.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-shell (gen_delete): k=0, d=4, Levenshtein 4\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_073_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-python (gen_delete): k=0, d=3, Levenshtein 3\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_074_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-c (gen_delete): k=0, d=2, Levenshtein 2\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_075_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-java (gen_delete): k=0, d=2, Levenshtein 2\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_076_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on openwebmath (gen_delete): k=0, d=1, Levenshtein 1\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_077_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on fineweb-edu (gen_delete): k=0, d=8, Levenshtein 8\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_078_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-python (gen_delete): k=0, d=9, Levenshtein 9\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_079_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on dclm-baseline (gen_delete): k=0, d=8, Levenshtein 8\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_080_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on starcoder-python (gen_delete): k=0, d=3, Levenshtein 3\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/exact_repair_081_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "exact_repair",
+      "caption": "delete / repaired on slimpajama (gen_delete): k=0, d=3, Levenshtein 3\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/improved_020_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "improved",
+      "caption": "delete / partial_repair on fineweb-edu (gen_delete): k=0, d=6, Levenshtein 6\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/improved_021_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "improved",
+      "caption": "delete / partial_repair on openwebmath (gen_delete): k=0, d=11, Levenshtein 11\u21928."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/improved_022_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "improved",
+      "caption": "delete / partial_repair on slimpajama (gen_delete): k=0, d=9, Levenshtein 9\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/improved_023_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "improved",
+      "caption": "delete / partial_repair on fineweb-edu (gen_delete): k=0, d=8, Levenshtein 8\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/improved_024_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "improved",
+      "caption": "delete / partial_repair on openwebmath (gen_delete): k=0, d=6, Levenshtein 6\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/improved_025_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "improved",
+      "caption": "delete / partial_repair on slimpajama (gen_delete): k=0, d=6, Levenshtein 6\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/improved_026_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "improved",
+      "caption": "delete / partial_repair on starcoder-cpp (gen_delete): k=0, d=5, Levenshtein 5\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/improved_027_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "improved",
+      "caption": "delete / partial_repair on starcoder-python (gen_delete): k=0, d=4, Levenshtein 4\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/improved_028_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "improved",
+      "caption": "delete / partial_repair on slimpajama (gen_delete): k=0, d=7, Levenshtein 7\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/improved_082_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "improved",
+      "caption": "delete / under_delete on starcoder-javascript (gen_delete): k=0, d=9, Levenshtein 9\u21929."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/improved_083_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "improved",
+      "caption": "delete / under_delete on fineweb-edu (gen_delete): k=0, d=4, Levenshtein 4\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/improved_084_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "improved",
+      "caption": "delete / under_delete on openwebmath (gen_delete): k=0, d=11, Levenshtein 11\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/improved_085_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "improved",
+      "caption": "delete / under_delete on starcoder-java (gen_delete): k=0, d=8, Levenshtein 8\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/improved_086_starcoder-typescript.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "improved",
+      "caption": "delete / under_delete on starcoder-typescript (gen_delete): k=0, d=5, Levenshtein 5\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/improved_087_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "improved",
+      "caption": "delete / under_delete on starcoder-java (gen_delete): k=0, d=6, Levenshtein 6\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/no_edit_006_starcoder-typescript.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "no_edit",
+      "caption": "delete / no_edit on starcoder-typescript (gen_delete): k=0, d=4, Levenshtein 4\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/no_edit_007_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "no_edit",
+      "caption": "delete / no_edit on dclm-baseline (gen_delete): k=0, d=5, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/no_edit_008_starcoder-shell.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "no_edit",
+      "caption": "delete / no_edit on starcoder-shell (gen_delete): k=0, d=5, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/no_edit_009_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "no_edit",
+      "caption": "delete / no_edit on starcoder-javascript (gen_delete): k=0, d=5, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/no_edit_010_starcoder-shell.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "no_edit",
+      "caption": "delete / no_edit on starcoder-shell (gen_delete): k=0, d=6, Levenshtein 6\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/no_edit_011_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "no_edit",
+      "caption": "delete / no_edit on fineweb-edu (gen_delete): k=0, d=3, Levenshtein 3\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/no_edit_012_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "no_edit",
+      "caption": "delete / no_edit on dclm-baseline (gen_delete): k=0, d=6, Levenshtein 6\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/no_edit_013_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "no_edit",
+      "caption": "delete / no_edit on starcoder-c (gen_delete): k=0, d=5, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/no_edit_014_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "no_edit",
+      "caption": "delete / no_edit on starcoder-c (gen_delete): k=0, d=3, Levenshtein 3\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/no_edit_015_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "no_edit",
+      "caption": "delete / no_edit on slimpajama (gen_delete): k=0, d=4, Levenshtein 4\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/worse_000_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "worse",
+      "caption": "delete / made_worse on starcoder-python (gen_delete): k=0, d=11, Levenshtein 11\u219212."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/worse_001_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "worse",
+      "caption": "delete / made_worse on starcoder-go (gen_delete): k=0, d=2, Levenshtein 2\u219211."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/worse_002_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "worse",
+      "caption": "delete / made_worse on openwebmath (gen_delete): k=0, d=3, Levenshtein 3\u21927."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/worse_003_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "worse",
+      "caption": "delete / made_worse on starcoder-java (gen_delete): k=0, d=3, Levenshtein 3\u219276."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/worse_004_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "worse",
+      "caption": "delete / made_worse on starcoder-go (gen_delete): k=0, d=7, Levenshtein 7\u219218."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/worse_005_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "worse",
+      "caption": "delete / made_worse on starcoder-python (gen_delete): k=0, d=4, Levenshtein 4\u21929."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/worse_016_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "worse",
+      "caption": "delete / over_delete on slimpajama (gen_delete): k=0, d=3, Levenshtein 3\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/worse_017_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "worse",
+      "caption": "delete / over_delete on starcoder-cpp (gen_delete): k=0, d=3, Levenshtein 3\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/worse_018_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "worse",
+      "caption": "delete / over_delete on starcoder-cpp (gen_delete): k=0, d=7, Levenshtein 7\u21929."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/worse_019_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "worse",
+      "caption": "delete / over_delete on starcoder-c (gen_delete): k=0, d=3, Levenshtein 3\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/worse_088_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "worse",
+      "caption": "delete / wrong_content on starcoder-go (gen_delete): k=0, d=6, Levenshtein 6\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/wrong_position_089_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "wrong_position",
+      "caption": "delete / wrong_position on starcoder-go (gen_delete): k=0, d=5, Levenshtein 5\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/wrong_position_090_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "wrong_position",
+      "caption": "delete / wrong_position on slimpajama (gen_delete): k=0, d=4, Levenshtein 4\u21927."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/wrong_position_091_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "wrong_position",
+      "caption": "delete / wrong_position on starcoder-java (gen_delete): k=0, d=4, Levenshtein 4\u219213."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/wrong_position_092_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "wrong_position",
+      "caption": "delete / wrong_position on starcoder-c (gen_delete): k=0, d=8, Levenshtein 8\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/wrong_position_093_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "wrong_position",
+      "caption": "delete / wrong_position on openwebmath (gen_delete): k=0, d=3, Levenshtein 3\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/wrong_position_094_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "wrong_position",
+      "caption": "delete / wrong_position on dclm-baseline (gen_delete): k=0, d=3, Levenshtein 3\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/wrong_position_095_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "wrong_position",
+      "caption": "delete / wrong_position on starcoder-java (gen_delete): k=0, d=12, Levenshtein 12\u21927."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/wrong_position_096_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "wrong_position",
+      "caption": "delete / wrong_position on starcoder-cpp (gen_delete): k=0, d=6, Levenshtein 6\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/wrong_position_097_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "wrong_position",
+      "caption": "delete / wrong_position on starcoder-cpp (gen_delete): k=0, d=5, Levenshtein 5\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/wrong_position_098_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "wrong_position",
+      "caption": "delete / wrong_position on openwebmath (gen_delete): k=0, d=4, Levenshtein 4\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/delete/wrong_position_099_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "delete",
+      "outcome": "wrong_position",
+      "caption": "delete / wrong_position on openwebmath (gen_delete): k=0, d=2, Levenshtein 2\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/exact_repair_351_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "exact_repair",
+      "caption": "substitute / repaired on starcoder-go (gen_substitute): k=2, d=2, Levenshtein 2\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/exact_repair_352_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "exact_repair",
+      "caption": "substitute / repaired on starcoder-c (gen_substitute): k=4, d=4, Levenshtein 4\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/exact_repair_353_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "exact_repair",
+      "caption": "substitute / repaired on starcoder-javascript (gen_substitute): k=9, d=9, Levenshtein 9\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/exact_repair_354_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "exact_repair",
+      "caption": "substitute / repaired on starcoder-python (gen_substitute): k=5, d=5, Levenshtein 5\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/exact_repair_355_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "exact_repair",
+      "caption": "substitute / repaired on starcoder-javascript (gen_substitute): k=6, d=6, Levenshtein 6\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/exact_repair_356_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "exact_repair",
+      "caption": "substitute / repaired on starcoder-python (gen_substitute): k=4, d=4, Levenshtein 4\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/exact_repair_357_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "exact_repair",
+      "caption": "substitute / repaired on starcoder-cpp (gen_substitute): k=4, d=4, Levenshtein 4\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/exact_repair_358_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "exact_repair",
+      "caption": "substitute / repaired on starcoder-python (gen_substitute): k=4, d=4, Levenshtein 4\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/exact_repair_359_starcoder-shell.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "exact_repair",
+      "caption": "substitute / repaired on starcoder-shell (gen_substitute): k=6, d=6, Levenshtein 6\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/exact_repair_360_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "exact_repair",
+      "caption": "substitute / repaired on starcoder-go (gen_substitute): k=7, d=7, Levenshtein 7\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/exact_repair_361_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "exact_repair",
+      "caption": "substitute / repaired on starcoder-java (gen_substitute): k=3, d=3, Levenshtein 3\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/exact_repair_362_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "exact_repair",
+      "caption": "substitute / repaired on starcoder-go (gen_substitute): k=7, d=7, Levenshtein 7\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/exact_repair_363_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "exact_repair",
+      "caption": "substitute / repaired on starcoder-cpp (gen_substitute): k=2, d=2, Levenshtein 2\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/exact_repair_364_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "exact_repair",
+      "caption": "substitute / repaired on starcoder-python (gen_substitute): k=8, d=8, Levenshtein 8\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/exact_repair_365_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "exact_repair",
+      "caption": "substitute / repaired on dclm-baseline (gen_substitute): k=2, d=2, Levenshtein 2\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/exact_repair_366_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "exact_repair",
+      "caption": "substitute / repaired on starcoder-java (gen_substitute): k=2, d=2, Levenshtein 2\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/exact_repair_367_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "exact_repair",
+      "caption": "substitute / repaired on starcoder-c (gen_substitute): k=3, d=3, Levenshtein 3\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/exact_repair_368_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "exact_repair",
+      "caption": "substitute / repaired on starcoder-python (gen_substitute): k=4, d=4, Levenshtein 4\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_322_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on dclm-baseline (gen_substitute): k=8, d=8, Levenshtein 8\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_323_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on starcoder-go (gen_substitute): k=5, d=5, Levenshtein 5\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_324_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on starcoder-cpp (gen_substitute): k=6, d=6, Levenshtein 6\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_325_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on starcoder-javascript (gen_substitute): k=5, d=5, Levenshtein 5\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_326_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on openwebmath (gen_substitute): k=6, d=6, Levenshtein 6\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_327_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on openwebmath (gen_substitute): k=3, d=3, Levenshtein 3\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_328_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on dclm-baseline (gen_substitute): k=6, d=6, Levenshtein 6\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_329_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on starcoder-java (gen_substitute): k=4, d=4, Levenshtein 4\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_330_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on starcoder-c (gen_substitute): k=8, d=8, Levenshtein 8\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_331_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on starcoder-c (gen_substitute): k=6, d=6, Levenshtein 6\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_332_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on starcoder-go (gen_substitute): k=3, d=3, Levenshtein 3\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_333_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on slimpajama (gen_substitute): k=9, d=9, Levenshtein 9\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_334_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on starcoder-cpp (gen_substitute): k=6, d=6, Levenshtein 6\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_335_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on openwebmath (gen_substitute): k=6, d=6, Levenshtein 6\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_336_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on openwebmath (gen_substitute): k=4, d=4, Levenshtein 4\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_337_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on starcoder-javascript (gen_substitute): k=2, d=2, Levenshtein 2\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_338_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on starcoder-python (gen_substitute): k=3, d=3, Levenshtein 3\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_339_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on fineweb-edu (gen_substitute): k=3, d=3, Levenshtein 3\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_340_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on slimpajama (gen_substitute): k=6, d=6, Levenshtein 6\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_341_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on starcoder-java (gen_substitute): k=6, d=6, Levenshtein 6\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_342_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on starcoder-javascript (gen_substitute): k=2, d=2, Levenshtein 2\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_343_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on starcoder-python (gen_substitute): k=4, d=4, Levenshtein 4\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_344_starcoder-shell.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on starcoder-shell (gen_substitute): k=4, d=4, Levenshtein 4\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_345_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on starcoder-python (gen_substitute): k=3, d=3, Levenshtein 3\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_346_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on fineweb-edu (gen_substitute): k=8, d=8, Levenshtein 8\u21927."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_347_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on starcoder-python (gen_substitute): k=9, d=9, Levenshtein 9\u21927."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_348_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on starcoder-python (gen_substitute): k=3, d=3, Levenshtein 3\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_349_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on slimpajama (gen_substitute): k=3, d=3, Levenshtein 3\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_350_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / partial_repair on starcoder-java (gen_substitute): k=6, d=6, Levenshtein 6\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_369_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / under_delete on starcoder-java (gen_substitute): k=6, d=6, Levenshtein 6\u21928."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_370_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / under_delete on openwebmath (gen_substitute): k=11, d=11, Levenshtein 11\u21928."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_371_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / under_delete on starcoder-c (gen_substitute): k=13, d=13, Levenshtein 13\u21928."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_372_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / under_delete on starcoder-javascript (gen_substitute): k=5, d=5, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_373_starcoder-typescript.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / under_delete on starcoder-typescript (gen_substitute): k=8, d=8, Levenshtein 8\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_374_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / under_delete on starcoder-cpp (gen_substitute): k=3, d=3, Levenshtein 3\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_375_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / under_delete on starcoder-cpp (gen_substitute): k=5, d=5, Levenshtein 5\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_376_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / under_delete on dclm-baseline (gen_substitute): k=8, d=8, Levenshtein 8\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_377_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / under_delete on starcoder-go (gen_substitute): k=6, d=6, Levenshtein 6\u219211."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/improved_378_starcoder-typescript.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "improved",
+      "caption": "substitute / under_delete on starcoder-typescript (gen_substitute): k=5, d=5, Levenshtein 5\u219211."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/no_edit_308_starcoder-shell.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "no_edit",
+      "caption": "substitute / no_edit on starcoder-shell (gen_substitute): k=3, d=3, Levenshtein 3\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/no_edit_309_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "no_edit",
+      "caption": "substitute / no_edit on openwebmath (gen_substitute): k=3, d=3, Levenshtein 3\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/no_edit_310_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "no_edit",
+      "caption": "substitute / no_edit on openwebmath (gen_substitute): k=3, d=3, Levenshtein 3\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/no_edit_311_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "no_edit",
+      "caption": "substitute / no_edit on openwebmath (gen_substitute): k=11, d=11, Levenshtein 11\u219211."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/no_edit_312_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "no_edit",
+      "caption": "substitute / no_edit on openwebmath (gen_substitute): k=5, d=5, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/no_edit_313_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "no_edit",
+      "caption": "substitute / no_edit on starcoder-cpp (gen_substitute): k=6, d=6, Levenshtein 6\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/no_edit_314_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "no_edit",
+      "caption": "substitute / no_edit on slimpajama (gen_substitute): k=7, d=7, Levenshtein 7\u21927."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/no_edit_315_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "no_edit",
+      "caption": "substitute / no_edit on slimpajama (gen_substitute): k=4, d=4, Levenshtein 4\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_300_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / made_worse on dclm-baseline (gen_substitute): k=3, d=3, Levenshtein 3\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_301_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / made_worse on fineweb-edu (gen_substitute): k=8, d=8, Levenshtein 8\u219210."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_302_starcoder-typescript.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / made_worse on starcoder-typescript (gen_substitute): k=4, d=4, Levenshtein 4\u219210."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_303_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / made_worse on starcoder-java (gen_substitute): k=5, d=5, Levenshtein 5\u21927."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_304_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / made_worse on slimpajama (gen_substitute): k=5, d=5, Levenshtein 5\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_305_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / made_worse on openwebmath (gen_substitute): k=5, d=5, Levenshtein 5\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_306_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / made_worse on starcoder-java (gen_substitute): k=8, d=8, Levenshtein 8\u219214."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_307_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / made_worse on starcoder-c (gen_substitute): k=3, d=3, Levenshtein 3\u21928."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_316_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / over_delete on slimpajama (gen_substitute): k=3, d=3, Levenshtein 3\u21927."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_317_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / over_delete on openwebmath (gen_substitute): k=6, d=6, Levenshtein 6\u21927."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_318_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / over_delete on openwebmath (gen_substitute): k=6, d=6, Levenshtein 6\u21927."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_319_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / over_delete on openwebmath (gen_substitute): k=2, d=2, Levenshtein 2\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_320_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / over_delete on starcoder-c (gen_substitute): k=2, d=2, Levenshtein 2\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_321_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / over_delete on openwebmath (gen_substitute): k=1, d=1, Levenshtein 1\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_379_starcoder-typescript.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / wrong_content on starcoder-typescript (gen_substitute): k=4, d=4, Levenshtein 4\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_380_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / wrong_content on starcoder-cpp (gen_substitute): k=6, d=6, Levenshtein 6\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_381_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / wrong_content on starcoder-c (gen_substitute): k=2, d=2, Levenshtein 2\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_382_starcoder-shell.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / wrong_content on starcoder-shell (gen_substitute): k=5, d=5, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_383_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / wrong_content on dclm-baseline (gen_substitute): k=7, d=7, Levenshtein 7\u21927."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_384_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / wrong_content on fineweb-edu (gen_substitute): k=6, d=6, Levenshtein 6\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_385_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / wrong_content on starcoder-cpp (gen_substitute): k=6, d=6, Levenshtein 6\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_386_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / wrong_content on starcoder-java (gen_substitute): k=4, d=4, Levenshtein 4\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_387_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / wrong_content on openwebmath (gen_substitute): k=5, d=5, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_388_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / wrong_content on starcoder-cpp (gen_substitute): k=7, d=7, Levenshtein 7\u21927."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/worse_389_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "worse",
+      "caption": "substitute / wrong_content on fineweb-edu (gen_substitute): k=1, d=1, Levenshtein 1\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/wrong_position_390_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "wrong_position",
+      "caption": "substitute / wrong_position on dclm-baseline (gen_substitute): k=5, d=5, Levenshtein 5\u21928."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/wrong_position_391_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "wrong_position",
+      "caption": "substitute / wrong_position on starcoder-python (gen_substitute): k=11, d=11, Levenshtein 11\u219215."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/wrong_position_392_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "wrong_position",
+      "caption": "substitute / wrong_position on slimpajama (gen_substitute): k=4, d=4, Levenshtein 4\u21929."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/wrong_position_393_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "wrong_position",
+      "caption": "substitute / wrong_position on starcoder-c (gen_substitute): k=3, d=3, Levenshtein 3\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/wrong_position_394_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "wrong_position",
+      "caption": "substitute / wrong_position on fineweb-edu (gen_substitute): k=4, d=4, Levenshtein 4\u21929."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/wrong_position_395_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "wrong_position",
+      "caption": "substitute / wrong_position on starcoder-java (gen_substitute): k=12, d=12, Levenshtein 12\u219212."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/wrong_position_396_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "wrong_position",
+      "caption": "substitute / wrong_position on starcoder-cpp (gen_substitute): k=5, d=5, Levenshtein 5\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/wrong_position_397_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "wrong_position",
+      "caption": "substitute / wrong_position on starcoder-cpp (gen_substitute): k=5, d=5, Levenshtein 5\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/wrong_position_398_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "wrong_position",
+      "caption": "substitute / wrong_position on dclm-baseline (gen_substitute): k=6, d=6, Levenshtein 6\u21928."
+    },
+    {
+      "path": "assets/gallery/free_generation/substitute/wrong_position_399_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "substitute",
+      "outcome": "wrong_position",
+      "caption": "substitute / wrong_position on starcoder-c (gen_substitute): k=5, d=5, Levenshtein 5\u21925."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_200_starcoder-shell.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-shell (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_201_starcoder-typescript.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-typescript (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_202_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on dclm-baseline (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_203_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-cpp (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_204_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-go (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_205_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-c (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_206_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-python (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_207_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on slimpajama (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_208_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-cpp (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_209_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-go (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_210_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-c (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_211_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-java (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_212_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on dclm-baseline (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_213_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-c (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_214_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-javascript (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_215_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-javascript (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_216_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on openwebmath (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_217_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on openwebmath (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_218_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on dclm-baseline (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_219_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-java (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_220_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on fineweb-edu (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_221_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-python (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_222_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on openwebmath (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_223_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-javascript (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_224_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on openwebmath (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_225_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-c (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_226_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-c (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_227_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-c (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_228_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-cpp (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_229_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on openwebmath (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_230_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on dclm-baseline (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_231_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-python (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_232_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-cpp (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_233_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-javascript (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_234_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-go (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_235_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on fineweb-edu (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_236_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on slimpajama (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_237_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-python (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_238_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-java (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_239_starcoder-shell.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-shell (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_240_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-go (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_241_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on fineweb-edu (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_242_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-java (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_243_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-cpp (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_244_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on openwebmath (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_245_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-java (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_246_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on openwebmath (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_247_starcoder-typescript.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-typescript (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_248_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on openwebmath (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_249_starcoder-typescript.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-typescript (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_250_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-cpp (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_251_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-cpp (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_252_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-cpp (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_253_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-python (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_254_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on dclm-baseline (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_255_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on openwebmath (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_256_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on openwebmath (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_257_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-javascript (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_258_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-java (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_259_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on openwebmath (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_260_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-python (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_261_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on fineweb-edu (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_262_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-java (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_263_starcoder-javascript.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-javascript (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_264_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-cpp (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_265_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-cpp (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_266_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-cpp (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_267_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on slimpajama (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_268_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-python (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_269_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-c (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_270_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on fineweb-edu (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_271_starcoder-shell.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-shell (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_272_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-python (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_273_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-java (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_274_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-c (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_275_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-java (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_276_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-c (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_277_starcoder-c.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-c (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_278_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on openwebmath (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_279_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-python (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_280_fineweb-edu.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on fineweb-edu (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_281_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-python (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_282_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on dclm-baseline (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_283_starcoder-python.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-python (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_284_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-go (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_285_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on slimpajama (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_286_starcoder-typescript.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-typescript (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_287_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on slimpajama (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_288_starcoder-java.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / no_edit on starcoder-java (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/no_edit_299_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "no_edit",
+      "caption": "none / spurious_harmless on openwebmath (gen_none): k=0, d=0, Levenshtein 0\u21920."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/worse_289_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "worse",
+      "caption": "none / spurious_damaging on dclm-baseline (gen_none): k=0, d=0, Levenshtein 0\u21926."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/worse_290_starcoder-shell.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "worse",
+      "caption": "none / spurious_damaging on starcoder-shell (gen_none): k=0, d=0, Levenshtein 0\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/worse_291_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "worse",
+      "caption": "none / spurious_damaging on slimpajama (gen_none): k=0, d=0, Levenshtein 0\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/worse_292_starcoder-go.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "worse",
+      "caption": "none / spurious_damaging on starcoder-go (gen_none): k=0, d=0, Levenshtein 0\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/worse_293_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "worse",
+      "caption": "none / spurious_damaging on slimpajama (gen_none): k=0, d=0, Levenshtein 0\u21924."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/worse_294_dclm-baseline.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "worse",
+      "caption": "none / spurious_damaging on dclm-baseline (gen_none): k=0, d=0, Levenshtein 0\u21923."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/worse_295_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "worse",
+      "caption": "none / spurious_damaging on openwebmath (gen_none): k=0, d=0, Levenshtein 0\u21921."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/worse_296_openwebmath.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "worse",
+      "caption": "none / spurious_damaging on openwebmath (gen_none): k=0, d=0, Levenshtein 0\u21922."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/worse_297_starcoder-cpp.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "worse",
+      "caption": "none / spurious_damaging on starcoder-cpp (gen_none): k=0, d=0, Levenshtein 0\u21927."
+    },
+    {
+      "path": "assets/gallery/free_generation/none/worse_298_slimpajama.gif",
+      "mode": "free_generation",
+      "edit_type": "none",
+      "outcome": "worse",
+      "caption": "none / spurious_damaging on slimpajama (gen_none): k=0, d=0, Levenshtein 0\u21924."
+    }
+  ]
+}

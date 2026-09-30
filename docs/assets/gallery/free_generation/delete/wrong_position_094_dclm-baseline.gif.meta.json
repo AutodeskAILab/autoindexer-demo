@@ -1,0 +1,4 @@
+{
+  "outcome": "wrong_position",
+  "caption": "delete / wrong_position on dclm-baseline (gen_delete): k=0, d=3, Levenshtein 3→5."
+}

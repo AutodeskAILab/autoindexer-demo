@@ -1,0 +1,4 @@
+{
+  "outcome": "wrong_position",
+  "caption": "insert / wrong_position on starcoder-c (gen_insert): k=3, d=0, Levenshtein 3→3."
+}

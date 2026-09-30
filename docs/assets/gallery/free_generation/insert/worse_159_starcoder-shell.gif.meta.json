@@ -1,0 +1,4 @@
+{
+  "outcome": "worse",
+  "caption": "insert / over_delete on starcoder-shell (gen_insert): k=4, d=0, Levenshtein 4→2."
+}

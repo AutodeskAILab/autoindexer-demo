@@ -1,0 +1,4 @@
+{
+  "outcome": "worse",
+  "caption": "substitute / made_worse on starcoder-java (gen_substitute): k=5, d=5, Levenshtein 5→7."
+}

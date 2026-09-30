@@ -1,0 +1,4 @@
+{
+  "outcome": "worse",
+  "caption": "substitute / made_worse on starcoder-typescript (gen_substitute): k=4, d=4, Levenshtein 4→10."
+}

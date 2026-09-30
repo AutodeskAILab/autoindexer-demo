@@ -1,0 +1,4 @@
+{
+  "outcome": "wrong_position",
+  "caption": "insert / wrong_position on dclm-baseline (gen_insert): k=2, d=0, Levenshtein 2→5."
+}

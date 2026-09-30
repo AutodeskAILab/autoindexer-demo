@@ -1,0 +1,4 @@
+{
+  "outcome": "worse",
+  "caption": "delete / over_delete on starcoder-cpp (gen_delete): k=0, d=7, Levenshtein 7→9."
+}
