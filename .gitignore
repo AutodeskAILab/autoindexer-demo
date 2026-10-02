@@ -168,3 +168,5 @@ remote
 checkpoint
 # Local outputs from scripts/edit_eval
 runs/
+
+.DS_Store
