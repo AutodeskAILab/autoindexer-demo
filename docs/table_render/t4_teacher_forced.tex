@@ -1,0 +1,20 @@
+\input{preamble}
+\begin{document}
+\begin{minipage}{19cm}
+\centering
+\small
+\begin{tabular}{lccc}
+    \toprule
+    Measurement & Insert & Delete & Substitute \\
+    \midrule
+    $P(\textsc{edit})$ at trigger (corrupted / clean) & 0.045 / 0.027 & 0.088 / 0.026 & 0.090 / 0.027 \\
+    \quad -- Elevation over clean control & $\sim$1.7$\times$ & $\sim$3.4$\times$ & $\sim$3.4$\times$ \\
+    \quad -- Paired win-rate ($P(\textsc{edit}|\textsc{corrupt}) > P(\textsc{edit}|\textsc{clean})$) & 90\% & 100\% & 100\% \\
+    Correct edit start & 40\% & 76\% & 84\% \\
+    Correct span (both start and end) & 38\% & 69\% & 74\% \\
+    Replacement token accuracy & 76\% & -- & 80\% \\
+    $P(\textsc{return})$ at correct stop & 72\% & 84\% & 73\% \\
+    \bottomrule
+\end{tabular}
+\end{minipage}
+\end{document}

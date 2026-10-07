@@ -1,0 +1,17 @@
+\input{preamble}
+\begin{document}
+\begin{minipage}{14cm}
+\centering
+\begin{tabular}{lccc}
+    \toprule
+    & Autoregressive & Discrete Diffusion & Chain of Edits (Ours) \\
+    \midrule
+    Generation order of tokens    & Autoregressive & Non-autoregressive & Autoregressive \\
+    Display order of tokens   & Fixed-order & Fixed-order & Decoupled (flexible) \\
+    Prediction target   & Next token & Token demasking & Undo perturbation \\
+    KV-caching   & Exact & Approximate & Exact \\
+    Amendable context   & No & Limited & Yes \\
+    \bottomrule
+\end{tabular}
+\end{minipage}
+\end{document}

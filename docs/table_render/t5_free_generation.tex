@@ -1,0 +1,28 @@
+\input{preamble}
+\begin{document}
+\begin{minipage}{19cm}
+\centering
+\small
+\resizebox{19cm}{!}{%
+\begin{tabular}{lcccccc}
+    \toprule
+    Outcome / 100 & Start cursor & End cursor & Insert & Delete & Substitute & No modification \\
+    \midrule
+    Repaired exactly & \cmark & \cmark & 10 & 53 & 18 & -- \\
+    No edit needed (true negative) & -- & -- & -- & -- & -- & 89 \\
+    No edit emitted (false negative) & -- & -- & 57 & 10 & 8 & -- \\
+    Correct span, improved & \cmark & \cmark & 12 & 9 & 29 & -- \\
+    Correct span, neutral & \cmark & \cmark & 2 & 1 & 11 & -- \\
+    Correct span, worse & \cmark & \cmark & 2 & 6 & 8 & -- \\
+    Correct edit start, deleted too few & \cmark & \xmark & -- & 6 & 10 & -- \\
+    Correct edit start, deleted too many & \cmark & \xmark & 4 & 4 & 6 & -- \\
+    Incorrect position & \xmark & -- & 13 & 11 & 10 & 11 \\
+    \midrule
+    Correct edit emission & -- & -- & 43 & 90 & 92 & 89 \\
+    Correct edit span & -- & -- & 26 & 69 & 66 & -- \\
+    Net improvement & -- & -- & $+11$ & $+66$ & $+31$ & -- \\
+    \bottomrule
+\end{tabular}%
+}
+\end{minipage}
+\end{document}

@@ -1,0 +1,32 @@
+\input{preamble}
+\begin{document}
+\begin{minipage}{20cm}
+\centering
+\resizebox{20cm}{!}{%
+\begin{tabular}{lcc|ccc}
+\toprule
+\textbf{Model} & \cellcolor{gray!10}\textbf{Qwen3 8B} & \cellcolor{gray!10}\textbf{Qwen3 8B LoRA}$^{\ast}$ & \textbf{LLaDA 8B Instruct} & \textbf{Dream 7B Instruct} & \textbf{AutoIndexer 8B LoRA}$^{\ast}$ \\
+\midrule
+Decoding strategy & \cellcolor{gray!10}AR & \cellcolor{gray!10}AR & Diffusion & Diffusion & CoE (Chain of Edits) \\
+Editable context & \cellcolor{gray!10}No & \cellcolor{gray!10}No & Limited & Limited & Yes \\
+\midrule
+\multicolumn{6}{c}{General Tasks} \\
+\midrule
+ARC-Challenge (0) & \cellcolor{gray!10}\underline{90.61} & \cellcolor{gray!10}90.44 & 86.26 & 88.23 & \underline{\textbf{90.61}} \\
+MMLU-Pro (0) & \cellcolor{gray!10}42.38 & \cellcolor{gray!10}\underline{47.90} & 32.65 & 44.39 & \underline{\textbf{47.90}} \\
+\midrule
+\multicolumn{6}{c}{Mathematics \& Science} \\
+\midrule
+GPQA-Diamond (5) & \cellcolor{gray!10}35.35 & \cellcolor{gray!10}29.80 & 20.71 & \underline{\textbf{35.86}} & 30.81 \\
+GSM8K (5) & \cellcolor{gray!10}\underline{86.96} & \cellcolor{gray!10}82.41 & 75.74 & 80.59 & \textbf{80.67} \\
+MATH500 (4) & \cellcolor{gray!10}\underline{52.20} & \cellcolor{gray!10}48.00 & 17.00 & 45.80 & \textbf{49.00} \\
+\midrule
+\multicolumn{6}{c}{Code} \\
+\midrule
+HumanEval (0) & \cellcolor{gray!10}\underline{83.54} & \cellcolor{gray!10}71.95 & 45.12 & 52.44 & \textbf{75.61} \\
+MBPP (3) & \cellcolor{gray!10}\underline{67.40} & \cellcolor{gray!10}39.60 & 37.60 & 58.00 & \textbf{64.00} \\
+\bottomrule
+\end{tabular}%
+}
+\end{minipage}
+\end{document}

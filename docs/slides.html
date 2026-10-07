@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AutoIndexer — Slide Deck</title>
+<link rel="stylesheet" href="assets/slides.css">
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script" async></script>
+</head>
+<body>
+
+<div id="deck">
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 1 — TITLE -->
+  <!-- ============================================================ -->
+  <section class="slide title-slide">
+    <div class="kicker">Autodesk Research</div>
+    <h1>AutoIndexer</h1>
+    <h2>Flexible-Order Decoding by Training Causal Models<br>on Chains of Edits</h2>
+    <p class="authors">Shu Ishida&nbsp;&middot;&nbsp;Aliasghar Khani&nbsp;&middot;&nbsp;Tianyu Zhang&nbsp;&middot;&nbsp;The Cong Luong&nbsp;&middot;&nbsp;James Seale Smith&nbsp;&middot;&nbsp;Adam Gaier</p>
+    <div class="badge-row">
+      <span class="badge">Flexible-Order Decoding</span>
+      <span class="badge">Active Context Refinement</span>
+      <span class="badge">Chain of Edits</span>
+      <span class="badge">FlashAttention-4</span>
+    </div>
+    <nav class="title-resource-icons" aria-label="Project resources">
+      <a class="resource-icon resource-icon--github" href="https://github.com/AutodeskAILab/autoindexer/" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
+        <img src="assets/icons/github.svg" width="24" height="24" alt="">
+      </a>
+      <a class="resource-icon resource-icon--web" href="https://autodeskailab.github.io/autoindexer-demo/" target="_blank" rel="noopener noreferrer" aria-label="Project page">
+        <img src="assets/icons/globe.svg" width="24" height="24" alt="">
+      </a>
+      <a class="resource-icon resource-icon--openreview" href="https://openreview.net/forum?id=QxsLMneprg" target="_blank" rel="noopener noreferrer" aria-label="Workshop paper on OpenReview">
+        <img src="assets/icons/document.svg" width="24" height="24" alt="">
+      </a>
+      <a class="resource-icon resource-icon--hf" href="https://huggingface.co/collections/ADSKAILab/autoindexer" target="_blank" rel="noopener noreferrer" aria-label="Hugging Face model collection">
+        <img src="assets/icons/huggingface.svg" width="24" height="24" alt="">
+      </a>
+    </nav>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 2 — PROBLEM -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Motivation</div>
+    <h2>Left-to-right decoding can't revise itself</h2>
+    <div class="two-col">
+      <div>
+        <p>Autoregressive LLMs commit to every token forever &mdash; unlike humans, who draft, then revise.</p>
+        <ul class="bullets">
+          <li>Cross-references &amp; word counts often need fixing <em>after</em> the text exists.</li>
+          <li>Diffusion can "correct" masked tokens, but positions are fixed &mdash; no inserting or deleting.</li>
+          <li>Block diffusion still binds tokens to their original absolute positions.</li>
+        </ul>
+      </div>
+      <div class="callout-card">
+        <div class="callout-title">Core idea</div>
+        <p>Decouple where a token is <strong>generated</strong> from where it is <strong>displayed</strong>. Keep the benefits of autoregression (KV-caching), but non-autoregressive in <em>display order</em>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 3 — COMPARISON TABLE -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Positioning</div>
+    <h2>Autoregressive vs. Diffusion vs. Chain of Edits</h2>
+    <img class="fig table-fig" src="assets/table_decoding_strategies.png" alt="Table 1: Comparison between decoding strategies of transformers">
+    <p class="footnote">AutoIndexer keeps exact KV-caching while letting <em>display</em> order be rewritten after the fact.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 4 — OVERVIEW FIGURE -->
+  <!-- ============================================================ -->
+  <section class="slide slide-overview-fig">
+    <div class="kicker">Method Overview</div>
+    <h2>AutoIndexer Overview</h2>
+    <div class="overview-fig-layout">
+      <img class="fig overview-fig-img" src="assets/figure1.png" alt="AutoIndexer overview figure">
+      <div class="overview-fig-notes small">
+        <div><strong>Left — CoE-RoPE.</strong> Attention splits into segments: "before-cursor" keys use relative RoPE, "after-cursor" keys use a cursor-anchored (key-only) path.</div>
+        <div><strong>Middle — Architecture.</strong> One backbone, three heads: token, marker (<span class="inline-marker normal">[NORMAL]</span>/<span class="inline-marker edit">[EDIT]</span>/<span class="inline-marker return">[RETURN]</span>/<span class="inline-marker eos">[EOS]</span>), and cursor (predicts edit start/end).</div>
+        <div><strong>Right — Position shifts.</strong> <span class="inline-marker edit">[EDIT]</span> resets position to 0 at the cursor. Tokens after it use cursor-anchored (key-only) encoding until <span class="inline-marker return">[RETURN]</span>.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 5 — MARKERS & CURSOR -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Section 2.1 &mdash; Active Context Refinement</div>
+    <h2>Marker tokens + a cursor head</h2>
+    <div class="marker-row">
+      <span class="marker normal">[NORMAL]</span>
+      <span class="marker edit">[EDIT]</span>
+      <span class="marker return">[RETURN]</span>
+      <span class="marker eos">[EOS]</span>
+    </div>
+    <div class="two-col">
+      <div>
+        <p>A <strong>marker head</strong> decides whether the next token is ordinary vocabulary or one of these four classes &mdash; never competing inside the &gt;150k-way softmax.</p>
+        <p>When <span class="inline-marker edit">[EDIT]</span> fires, a pointer network (<strong>cursor head</strong>) predicts a start \(S\) and end \(E\), like a text editor's selection.</p>
+      </div>
+      <div class="callout-card">
+        <div class="callout-title">One operation, three edits</div>
+        <p>Edit indices \(s \le e\):</p>
+        <ul class="bullets tight">
+          <li><strong>Insertion:</strong> \(s = e\)</li>
+          <li><strong>Deletion:</strong> \(s &lt; e\), no replacement</li>
+          <li><strong>Substitution:</strong> \(s &lt; e\), with replacement</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 6 — HOW AN EDIT UNFOLDS -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Section 2.1</div>
+    <h2>What <span class="inline-marker edit">[EDIT]</span> &hellip; <span class="inline-marker return">[RETURN]</span> actually do</h2>
+    <div class="steps-grid">
+      <div class="step-box">
+        <div class="step-num">1</div>
+        <p><span class="inline-marker edit">[EDIT]</span> moves the cursor to position \(s\) in the <strong>display</strong> sequence. The new token always gets relative position 1.</p>
+      </div>
+      <div class="step-box">
+        <div class="step-num">2</div>
+        <p>Replacement / inserted tokens are generated at the cursor, one at a time, fully autoregressively.</p>
+      </div>
+      <div class="step-box">
+        <div class="step-num">3</div>
+        <p><span class="inline-marker return">[RETURN]</span> sends the cursor back to the end and re-assigns positions. \(e - s\) tokens are removed.</p>
+      </div>
+    </div>
+    <p class="footnote">Removed tokens are <em>masked</em>, not deleted from the KV cache &mdash; so hidden edit spans can double as scratch registers, like Chain-of-Thought that never reaches the output.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 6B — WATCH IT IN ACTION (VANILLA VS AUTOINDEXER) -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Section 2.1 &mdash; Watch It In Action</div>
+    <h2>Same edit, two decoders</h2>
+    <div class="anim-compare">
+      <div class="anim-panel">
+        <div class="anim-panel-title">
+          <span>Vanilla decoder &mdash; append-only, positions fixed at write time</span>
+          <button class="play-btn" id="play-vanilla-cmp" onclick="playVanillaCompare()">&#9654; Play</button>
+        </div>
+        <div class="token-stream" id="vanilla-cmp-stream"></div>
+      </div>
+      <div class="anim-panel">
+        <div class="anim-panel-title">
+          <span>AutoIndexer &mdash; generation stream (append-only, never invalidated)</span>
+          <button class="play-btn" id="play-autoindexer-cmp" onclick="playAutoIndexerCompare()">&#9654; Play</button>
+        </div>
+        <div class="token-stream" id="ai-gen-stream"></div>
+      </div>
+      <div class="anim-panel">
+        <div class="anim-panel-title"><span>AutoIndexer &mdash; reconstructed display sentence</span></div>
+        <div class="token-stream" id="ai-display-stream"></div>
+      </div>
+    </div>
+    <p class="footnote">Both decoders start from "The robot moved item." The vanilla decoder can only append &mdash; it can't insert "small warehouse" earlier without restarting. AutoIndexer appends <span class="inline-marker edit">[EDIT]</span>/<span class="inline-marker return">[RETURN]</span> markers to the <em>same</em> KV cache; the parser slots each token into its display position live, updating the sentence in place.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 7 — PERTURBATION TRAINING -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Section 2.2 &mdash; Training</div>
+    <h2>Training on simulated edit trajectories</h2>
+    <img class="fig fig-wide" src="assets/target_sequence.png" alt="Simulated edit trajectory construction">
+    <p>A clean sequence \(\vec{x}\) is perturbed by sampling \(n\) random edit operators and applying their <strong>inverses</strong> in reverse order:</p>
+    <div class="eq">\[ \tau = \mathcal{E}_0^{-1} \circ \cdots \circ \mathcal{E}_{n-1}^{-1}(\vec{x}) \]</div>
+    <p>The model learns to <strong>undo</strong> the perturbation &mdash; same forward/reverse structure as diffusion, but "noise" is a discrete edit program. No human edit history required, though real diffs (e.g. git) enable task-specific fine-tuning.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 8 — CHAIN-OF-EDITS ROPE -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Section 2.3 &mdash; Positional Encoding</div>
+    <h2>Chain-of-Edits RoPE</h2>
+    <p>Standard RoPE factorizes a static relative-position matrix into query/key rotations. AutoIndexer generalizes this to a <strong>chain of edits</strong>: attention splits into segments wherever positions shift.</p>
+    <div class="two-col">
+      <ul class="bullets">
+        <li><strong>Normal segment:</strong> standard RoPE.</li>
+        <li><strong>In-edit segment:</strong> tokens <em>before</em> the cursor get normal RoPE; tokens <em>after</em> keep a fixed absolute position &mdash; only the key rotates, not the query.</li>
+      </ul>
+      <div class="eq-card">
+        <div class="eq">\[
+        \mathrm{attn}(\vec q,\vec k,\vec\theta_q,\vec\theta_k,m_{\mathrm{anc}},m_{\mathrm{attn}})
+        = \big(\vec q_{\mathrm{rope}}\!\cdot\!\vec k_{\mathrm{rope}}\odot \overline{m}_{\mathrm{anc}}
+        + \vec q\!\cdot\!\vec k_{\mathrm{rope}}\odot m_{\mathrm{anc}}\big)\odot m_{\mathrm{attn}}
+        \]</div>
+        <p class="footnote">Reduces exactly to standard RoPE when no edit is underway.</p>
+      </div>
+    </div>
+    <p class="footnote">Keys/values are cached once, <em>unrotated</em>; the rotary angle is applied at attention time &mdash; so KV-cache reuse survives non-monotonic display order.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 9 — FLASHATTENTION-4 KERNEL -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Appendix A.1 &mdash; Systems</div>
+    <h2>Mapping Chain-of-Edits attention onto FlashAttention-4</h2>
+    <div class="two-col">
+      <div>
+        <p>A naive implementation materializes <strong>two</strong> full score matrices per segment before masking &mdash; \(2\times\) the FLOPs of ordinary attention.</p>
+        <p>Instead, we route each key to exactly <strong>one</strong> of two paths, packed contiguously:</p>
+        <ul class="bullets tight">
+          <li>relative-attention path &rarr; one FlashAttention-4 <code>varlen</code> call</li>
+          <li>cursor-anchored path &rarr; a second <code>varlen</code> call</li>
+        </ul>
+        <p>Outputs recombine via log-sum-exp reweighting, reproducing the exact joint softmax &mdash; total FLOPs approximate \(1\times\), not \(2\times\).</p>
+      </div>
+      <div class="callout-card">
+        <div class="callout-title">Now supported</div>
+        <p>A fused <strong>CuTe-DSL</strong> kernel folds routing/packing into the RoPE rotation itself &mdash; the <code>autoindexer_cutedsl</code> implementation, plus a portable <code>autoindexer_eager</code> fallback and Triton backend.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 10 — DECODING & PARSING -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Section 2.4 &mdash; Inference</div>
+    <h2>Decoding and sequence parsing</h2>
+    <div class="two-col">
+      <div>
+        <p>At each step, the marker head samples a class; vocabulary sampling only happens for <span class="inline-marker normal">[NORMAL]</span>. Decoding enforces alternating <span class="inline-marker edit">[EDIT]</span>/<span class="inline-marker return">[RETURN]</span>.</p>
+        <p>When <span class="inline-marker edit">[EDIT]</span> fires at position \(t\): the cursor head samples \(s\) immediately, then \(e\) at the next step.</p>
+      </div>
+      <div class="callout-card">
+        <div class="callout-title">Recovering the output</div>
+        <p>A sequence parser tracks display positions live, then applies the edits <em>forward</em> to recover the answer:</p>
+        <div class="eq small-eq">\[ \hat{\vec x} = \mathcal{E}_{n-1}\circ\cdots\circ\mathcal{E}_0(\hat\tau) \]</div>
+        <p class="footnote">Parsing a synthetic training trajectory recovers the clean sequence exactly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 11 — TRAINING OBJECTIVE -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Section 2.5</div>
+    <h2>Training objective</h2>
+    <div class="eq">\[ \mathcal{L} = \mathcal{L}_{\text{token}} + \mathcal{L}_{\text{marker}} + \mathcal{L}_{\text{cursor}} \]</div>
+    <div class="three-col small">
+      <div><strong>\(\mathcal{L}_{\text{token}}\)</strong> — next-token cross-entropy over the perturbed trajectory \(\tau\).</div>
+      <div><strong>\(\mathcal{L}_{\text{marker}}\)</strong> — <em>focal loss</em> over {<span class="inline-marker normal">[NORMAL]</span>, <span class="inline-marker edit">[EDIT]</span>, <span class="inline-marker return">[RETURN]</span>, <span class="inline-marker eos">[EOS]</span>} for the class imbalance.</div>
+      <div><strong>\(\mathcal{L}_{\text{cursor}}\)</strong> — cross-entropy on start/end indices \(S_i, E_i\) at each <span class="inline-marker edit">[EDIT]</span>.</div>
+    </div>
+    <p class="footnote">Fully detaching the cursor head from the backbone gave better representations. AutoIndexer reuses a standard backbone, so it can be <strong>LoRA fine-tuned</strong> from any pretrained checkpoint &mdash; here, Qwen3 8B.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 12 — EXPERIMENTAL SETUP -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Section 3 &mdash; Experiments</div>
+    <h2>Two axes of evaluation</h2>
+    <div class="two-col equal">
+      <div class="callout-card">
+        <div class="callout-title">1. Does it still behave like an LLM?</div>
+        <p>LoRA-finetune Qwen3 8B Base/Instruct &rarr; <strong>AutoIndexer 8B LoRA</strong>. Evaluate on general / math&amp;science / code tasks vs. autoregressive (Qwen3) and diffusion (LLaDA, Dream) baselines.</p>
+      </div>
+      <div class="callout-card">
+        <div class="callout-title">2. Can it actually edit?</div>
+        <p>Corrupt a held-out validation window (insertion / deletion / substitution / no-op). Measure localization &amp; repair quality both <strong>teacher-forced</strong> and in <strong>free generation</strong> (64-token budget).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 13 — PRE-TRAINING BENCHMARK -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Section 3 &mdash; Results</div>
+    <h2>Pre-training benchmark: matches the backbone</h2>
+    <img class="fig table-fig" src="assets/table_pretrain.png" alt="Table 2: Pre-training benchmark results">
+    <p class="footnote">AutoIndexer essentially ties the matched Qwen3-LoRA baseline (within ~2 points everywhere except HumanEval, where it leads 59.2 vs 51.2) &mdash; the marker/cursor heads cost almost nothing &mdash; and beats the diffusion baselines by a wide margin (only ARC-Challenge is a near-tie, 59.6 vs Dream&rsquo;s 59.7).</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 14 — POST-TRAINING BENCHMARK -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Section 3 &mdash; Results</div>
+    <h2>Post-training (instruction) benchmark</h2>
+    <img class="fig table-fig" src="assets/table_posttrain.png" alt="Table 3: Post-training benchmark results">
+    <p class="footnote">Instruction-tuned AutoIndexer matches or beats the matched Qwen3-LoRA baseline on most tasks (ties MMLU-Pro, leads MBPP 64.0 vs 39.6; slightly behind on GSM8K) and outperforms the diffusion instruct baselines on all but GPQA-Diamond, where Dream 7B leads. The gap to the original Qwen3 8B on math/code likely reflects its RLVR training, which we do not replicate.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 15 — EDIT EVAL SETUP -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Section 3 &mdash; Edit Capability</div>
+    <h2>Does the model actually notice it's wrong?</h2>
+    <div class="two-col">
+      <div>
+        <p>We corrupted held-out CPT validation windows in four ways:</p>
+        <ul class="bullets">
+          <li><strong>Insertion</strong> &mdash; remove tokens from ground truth</li>
+          <li><strong>Deletion</strong> &mdash; add noise tokens</li>
+          <li><strong>Substitution</strong> &mdash; replace tokens with noise</li>
+          <li><strong>No-op</strong> &mdash; untouched ground truth</li>
+        </ul>
+      </div>
+      <div class="callout-card">
+        <div class="callout-title">Two lenses</div>
+        <p><strong>Teacher-forced:</strong> oracle-placed markers; does <span class="inline-marker edit">[EDIT]</span> probability rise at the corruption, and does the cursor localize it?</p>
+        <p><strong>Free generation:</strong> the model decides everything, 64-token budget &mdash; the real test of self-correction.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 16 — TEACHER FORCED TABLE -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Section 3 &mdash; Results</div>
+    <h2>Teacher-forced: the model feels the corruption</h2>
+    <img class="fig table-fig" src="assets/table_teacher_forced.png" alt="Table 4: Teacher-forced edit execution with oracle-placed markers">
+    <p class="footnote">Deletion and substitution leave an explicit noise cue and localize well (69&ndash;74% span accuracy). Insertion is weakest &mdash; missing text has no token to notice.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 17 — FREE GENERATION TABLE -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Section 3 &mdash; Results</div>
+    <h2>Free generation: 100 rollouts per corruption type</h2>
+    <img class="fig table-fig" src="assets/table_free_generation.png" alt="Table 5: Free-generation per-outcome counts">
+    <p class="footnote">"Net improvement" = rollouts whose Levenshtein distance to ground truth <em>decreased</em> after editing. Insertion remains hardest &mdash; missing text is easy to miss.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 18 — QUALITATIVE EXAMPLES: SUCCESSES -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Appendix A.6.1 &mdash; Qualitative Examples</div>
+    <h2>Exact repairs &amp; correct abstention</h2>
+    <div class="qual-grid cols-2">
+      <div class="qual-card">
+        <div class="qual-head"><span class="qual-tag success">Exact repair &middot; insertion (10/100)</span><span class="qual-lev">6&rarr;0</span></div>
+        <div class="qual-line"><span class="qual-label">Draft</span><code>&lt;h4 &hellip; contact-t <span class="corrupt">&lt;&lt;&lt;&hellip;&gt;&gt;&gt;</span> question or are you a hairstylist &hellip;&lt;/h4&gt;</code></div>
+        <div class="qual-line"><span class="qual-label">Emitted</span><code>&hellip;col-md-12<span class="inline-marker edit">[EDIT 61,61]</span>itles"&gt;Do you have a<span class="inline-marker return">[RETURN]</span> &hellip;</code></div>
+        <div class="qual-line"><span class="qual-label">Resolved</span><code>&lt;h4 &hellip; contact-titles"&gt;Do you have a question or &hellip;&lt;/h4&gt;</code> (verbatim match)</div>
+      </div>
+      <div class="qual-card">
+        <div class="qual-head"><span class="qual-tag success">Exact repair &middot; deletion (53/100)</span><span class="qual-lev">5&rarr;0</span></div>
+        <div class="qual-line"><span class="qual-label">Draft</span><code>&hellip;"mask image <span class="corrupt">&lt;&lt;&lt;[?] soaking principalmente&gt;&gt;&gt;</span> path", "");</code></div>
+        <div class="qual-line"><span class="qual-label">Emitted</span><code>&hellip;::Switch <span class="inline-marker edit">[EDIT 129,134]</span> <span class="inline-marker return">[RETURN]</span> &gt;("s", "no-sleep", &hellip;</code></div>
+        <div class="qual-line"><span class="qual-label">Resolved</span><code>&hellip;"mask image path", "");</code></div>
+      </div>
+      <div class="qual-card">
+        <div class="qual-head"><span class="qual-tag success">Exact repair &middot; substitution (18/100)</span><span class="qual-lev">3&rarr;0</span></div>
+        <div class="qual-line"><span class="qual-label">Draft</span><code>import org.netbeans &lt; <span class="corrupt">&lt;&lt;&lt;enco(keys brutal&gt;&gt;&gt;</span> .client.LSPBindings; &hellip;</code></div>
+        <div class="qual-line"><span class="qual-label">Emitted</span><code>&hellip;modules.editor.*; <span class="inline-marker edit">[EDIT 185,188]</span> .modules.lsp <span class="inline-marker return">[RETURN]</span> &hellip;</code></div>
+        <div class="qual-line"><span class="qual-label">Resolved</span><code>import org.netbeans.modules.lsp.client.LSPBindings; &hellip;</code></div>
+      </div>
+      <div class="qual-card">
+        <div class="qual-head"><span class="qual-tag success">Correct abstention &middot; no-op (89/100)</span><span class="qual-lev">0&rarr;0</span></div>
+        <div class="qual-line"><span class="qual-label">Draft</span><code>{ 1, 2 } &gt;= { 1, 2 } true Every set is a superset of itself.</code></div>
+        <div class="qual-line"><span class="qual-label">Emitted</span><code>&hellip; (no marker emitted) &hellip;</code></div>
+        <div class="qual-line"><span class="qual-label">Resolved</span><code>(unmodified &mdash; correctly left alone)</code></div>
+      </div>
+    </div>
+    <p class="footnote">Corrupted spans shown as <code>&lt;&lt;&lt;&hellip;&gt;&gt;&gt;</code>. On uncorrupted drafts the model abstains correctly 89% of the time.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 19 — QUALITATIVE EXAMPLES: PARTIAL REPAIRS -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Appendix A.6.1 &mdash; Qualitative Examples</div>
+    <h2>Partial repairs: right span, imperfect content</h2>
+    <div class="qual-grid cols-3">
+      <div class="qual-card">
+        <div class="qual-head"><span class="qual-tag partial">Partial &middot; deletion (9/100)</span><span class="qual-lev">6&rarr;4</span></div>
+        <div class="qual-line"><span class="qual-label">Draft</span><code>&hellip;French Emb <span class="corrupt">&lt;&lt;&lt;educated[?] Identified[?] yup&gt;&gt;&gt;</span> assies &hellip;</code></div>
+        <div class="qual-line"><span class="qual-label">Emitted</span><code>&hellip;<span class="inline-marker edit">[EDIT 38,44]</span>assies and Cons<span class="inline-marker return">[RETURN]</span> &hellip;</code></div>
+        <div class="qual-line"><span class="qual-label">Resolved</span><code>&hellip;French Embassies and Consassies around the world &hellip;</code></div>
+        <p class="footnote" style="margin-top:0.1rem;">Exact span found, but writes an unwanted continuation instead of a clean delete.</p>
+      </div>
+      <div class="qual-card">
+        <div class="qual-head"><span class="qual-tag partial">Partial &middot; substitution (29/100)</span><span class="qual-lev">3&rarr;2</span></div>
+        <div class="qual-line"><span class="qual-label">Draft</span><code>// Analysis is the method that kicks <span class="corrupt">&lt;&lt;&lt;bilit&agrave; astronauts[?]&gt;&gt;&gt;</span> the analysis plugins</code></div>
+        <div class="qual-line"><span class="qual-label">Emitted</span><code>&hellip;<span class="inline-marker edit">[EDIT 15,18]</span> off the<span class="inline-marker return">[RETURN]</span> &hellip;</code></div>
+        <div class="qual-line"><span class="qual-label">Resolved</span><code>// Analysis is the method that kicks off the the analysis plugins</code></div>
+        <p class="footnote" style="margin-top:0.1rem;">Correct span, but a shorter malformed replacement leaves a doubled word.</p>
+      </div>
+      <div class="qual-card">
+        <div class="qual-head"><span class="qual-tag partial">Partial &middot; insertion (12/100)</span><span class="qual-lev">6&rarr;5</span></div>
+        <div class="qual-line"><span class="qual-label">Draft</span><code>if(!transpose){start=-1;step=1;}else <span class="corrupt">&lt;&lt;&lt;&hellip;&gt;&gt;&gt;</span> step=-1;}&hellip;</code></div>
+        <div class="qual-line"><span class="qual-label">Emitted</span><code>&hellip;<span class="inline-marker edit">[EDIT 38,38]</span> {<span class="inline-marker return">[RETURN]</span> &hellip;</code></div>
+        <div class="qual-line"><span class="qual-label">Resolved</span><code>if(!transpose){start=-1;step=1;}else{step=-1;}&hellip;</code></div>
+        <p class="footnote" style="margin-top:0.1rem;">Correctly localizes the empty span, but writes a shorter insertion than the gold 6 tokens.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 20 — QUALITATIVE EXAMPLES: FAILURES -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Appendix A.6.1 &mdash; Qualitative Examples</div>
+    <h2>Failure modes</h2>
+    <div class="qual-grid cols-2">
+      <div class="qual-card">
+        <div class="qual-head"><span class="qual-tag failure">Wrong position &middot; deletion (11/100)</span><span class="qual-lev">6&rarr;1</span></div>
+        <div class="qual-line"><span class="qual-label">Draft</span><code>auto &amp;scores_dim = <span class="corrupt">&lt;&lt;&lt;mutated Edit_Max.related):?&gt; fullName&gt;&gt;&gt;</span> scores-&gt;dims();</code></div>
+        <div class="qual-line"><span class="qual-label">Emitted</span><code>&hellip;float *r<span class="inline-marker edit">[EDIT 218,223]</span><span class="inline-marker return">[RETURN]</span>pn_rois_data&hellip;</code></div>
+        <div class="qual-line"><span class="qual-label">Resolved</span><code>auto &amp;scores_dim = mutated scores-&gt;dims();</code></div>
+        <p class="footnote" style="margin-top:0.1rem;">Cursor lands one token late; the first corrupted word survives.</p>
+      </div>
+      <div class="qual-card">
+        <div class="qual-head"><span class="qual-tag failure">Wrong position &middot; insertion (13/100)</span><span class="qual-lev">2&rarr;2</span></div>
+        <div class="qual-line"><span class="qual-label">Draft</span><code>gray: '#949 <span class="corrupt">&lt;&lt;&lt;&hellip;&gt;&gt;&gt;</span> ', lightGray: "#e8e8e9",</code></div>
+        <div class="qual-line"><span class="qual-label">Emitted</span><code>&hellip;createTheme <span class="inline-marker edit">[EDIT 219,219]</span> <span class="inline-marker return">[RETURN]</span> (colors, fonts) <span class="inline-marker eos">[EOS]</span></code></div>
+        <div class="qual-line"><span class="qual-label">Resolved</span><code>gray: '#949', lightGray: "#e8e8e9",</code></div>
+        <p class="footnote" style="margin-top:0.1rem;">Edit fires 152 tokens late, right at the end of the draft, and inserts nothing.</p>
+      </div>
+      <div class="qual-card">
+        <div class="qual-head"><span class="qual-tag failure">Wrong position &middot; substitution (10/100)</span><span class="qual-lev">12&rarr;12</span></div>
+        <div class="qual-line"><span class="qual-label">Draft</span><code>selector().get(BoxSelection <span class="corrupt">&lt;&lt;&lt;.middle[?]hots Leonard[?]&hellip;&gt;&gt;&gt;</span> .set(type.size);</code></div>
+        <div class="qual-line"><span class="qual-label">Emitted</span><code>&hellip;getBlockTile(11, <span class="inline-marker edit">[EDIT 43,49]</span> ().<span class="inline-marker return">[RETURN]</span> &hellip;</code></div>
+        <div class="qual-line"><span class="qual-label">Resolved</span><code>selector().get(BoxSelection.middle(). genome,default azureTextWriter pred.set(type.size);</code></div>
+        <p class="footnote" style="margin-top:0.1rem;">Span lands one token late and too short, leaving half the garbage in place.</p>
+      </div>
+      <div class="qual-card">
+        <div class="qual-head"><span class="qual-tag failure">Spurious edit on clean draft (11/100)</span><span class="qual-lev">0&rarr;6</span></div>
+        <div class="qual-line"><span class="qual-label">Draft</span><code>&hellip;one of the biggest things in determining a team's grit and power.&hellip;</code> <em>(uncorrupted)</em></div>
+        <div class="qual-line"><span class="qual-label">Emitted</span><code>&hellip;team's <span class="inline-marker edit">[EDIT 46,46]</span> ranking. I think this is <span class="inline-marker return">[RETURN]</span> &hellip;</code></div>
+        <div class="qual-line"><span class="qual-label">Resolved</span><code>&hellip;team's ranking. I think this is grit and power.&hellip;</code></div>
+        <p class="footnote" style="margin-top:0.1rem;">Model fires anyway on clean text, cutting into its own correct continuation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 18B — ATTENTION VIZ: CASE STUDY SETUP -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Appendix A.2 &mdash; Attention Visualization</div>
+    <h2>Case study: a corrupted shell script, teacher-forced</h2>
+    <div class="two-col">
+      <div class="code-card">
+        <div class="code-row"><span class="code-label">Draft</span><code>SCRIPT_DIR=&quot;$(cd <span class="corrupt">&laquo;&hellip;&nbsp;JavaScript&nbsp;&hellip;&nbsp;ves_hdl&nbsp;defaulted&raquo;</span>&nbsp; SCRIPT_DIR</code></div>
+        <div class="code-row"><span class="code-label">Gold</span><code>&quot;$(dirname &quot;$0&quot;)&quot; &amp;&amp; pwd)&quot; readonly</code></div>
+      </div>
+      <div class="callout-card">
+        <div class="callout-title">Setup</div>
+        <p>A held-out StarCoder-Shell window, corrupted with a <code>substitute</code> op (10 tokens deleted, 10 random tokens inserted). The edit fires 170 tokens after the corruption. Forwarded once with <code>attn_implementation=&quot;autoindexer_eager&quot;</code> to read out real attention weights and cursor pointer distributions.</p>
+      </div>
+    </div>
+    <p class="footnote">Gold edit span: <code>start=9, end=19</code>; <span class="inline-marker edit">[EDIT]</span> at stream position 189, <span class="inline-marker return">[RETURN]</span> at 200 (212-token stream). Next three slides: cursor head, then full-stream and zoomed self-attention.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 18C — ATTENTION VIZ: CURSOR HEAD -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Appendix A.2 &mdash; Attention Visualization</div>
+    <h2>The cursor head finds the exact edit span</h2>
+    <img class="fig fig-tall" src="assets/attn_cursor_pointer_network.png" alt="Cursor head pointer-network probability distributions for the start and end cursor, full context and zoomed in around the gold edit span">
+    <p class="footnote">Start/end pointer distributions over the visible stream positions (log scale, left) and zoomed around the gold span (right). Both argmax positions land exactly on the gold cursor: <code>start</code>=9 (P=0.797) and <code>end</code>=19 (P=0.923).</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 18D — ATTENTION VIZ: QUERY-KEY ATTENTION (FULL) -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Appendix A.2 &mdash; Attention Visualization</div>
+    <h2>Self-attention carves out the deleted span at every depth</h2>
+    <div class="img-row tall">
+      <div class="img-row-item">
+        <img class="fig" src="assets/attn_qk_layer0_full.png" alt="Layer 0 query-key attention over the full 200-token stream">
+        <div class="img-row-caption">Layer 0 (first)</div>
+      </div>
+      <div class="img-row-item">
+        <img class="fig" src="assets/attn_qk_layer35_full.png" alt="Layer 35 query-key attention over the full 200-token stream">
+        <div class="img-row-caption">Layer 35 (last)</div>
+      </div>
+    </div>
+    <p class="footnote">Head-mean query-key attention over the full 212-token stream (log scale); dashed lines mark the gold span (9&ndash;19), <span class="inline-marker edit">[EDIT]</span> (189) and <span class="inline-marker return">[RETURN]</span> (200). While the edit is open (queries 189&ndash;200) the span stays visible, but after <span class="inline-marker return">[RETURN]</span> the mask removes the deleted keys 9&ndash;19 and the two markers at every layer.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 18E — ATTENTION VIZ: QUERY-KEY ATTENTION (ZOOMED) -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Appendix A.2 &mdash; Attention Visualization</div>
+    <h2>Zoomed view: attention inside the edit block</h2>
+    <div class="img-row tall">
+      <div class="img-row-item">
+        <img class="fig" src="assets/attn_qk_layer0_zoomed.png" alt="Layer 0 query-key attention, zoomed in around the edit marker">
+        <div class="img-row-caption">Layer 0 (first)</div>
+      </div>
+      <div class="img-row-item">
+        <img class="fig" src="assets/attn_qk_layer35_zoomed.png" alt="Layer 35 query-key attention, zoomed in around the edit marker">
+        <div class="img-row-caption">Layer 35 (last)</div>
+      </div>
+    </div>
+    <p class="footnote">Same layers, zoomed to <span class="inline-marker edit">[EDIT]</span>&hellip;<span class="inline-marker return">[RETURN]</span> and the replacement tokens between them (log scale); the deleted span (keys 9&ndash;19) is outside this window. Inside the block, tokens attend mostly to themselves and their recent neighbours. After <span class="inline-marker return">[RETURN]</span>, the <span class="inline-marker edit">[EDIT]</span>/<span class="inline-marker return">[RETURN]</span> key columns are masked (dark), and the continuation (<code>github.com/mat&hellip;</code>) attends to the pre-edit context and itself, with only weak weight on the replacement tokens &mdash; sharper at layer 35 than at layer 0.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 19 — RELATED WORK -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Section 4 &mdash; Related Work</div>
+    <h2>Where AutoIndexer sits</h2>
+    <div class="three-col small">
+      <div><strong>Discrete / Block diffusion</strong><br>LLaDA, Dream parallelize generation but fix token positions. Non-autoregressive at the token level, limiting KV-cache reuse.</div>
+      <div><strong>Any-order autoregressive</strong><br>Permutation LMs, any-subset speculative decoding, A3 revive flexible orders &mdash; but still commit upfront to a fixed set of positions.</div>
+      <div><strong>Edit-based generation</strong><br>Insertion/deletion decoders, DiffusER, Edit Flows. Closest in spirit, but mostly non-autoregressive or trained on external action traces.</div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 20 — CONCLUSION -->
+  <!-- ============================================================ -->
+  <section class="slide">
+    <div class="kicker">Conclusion</div>
+    <h2>A middle ground between rigidity and full iteration</h2>
+    <div class="two-col">
+      <div>
+        <p>AutoIndexer shows a model doesn't need to decide every displayed token in the order it computes them. It can draft, revisit, and keep only the resolved sequence &mdash; without losing autoregressive capabilities.</p>
+        <p>The harder problem isn't <em>how</em> to edit but <em>when</em>: knowing to stop drafting and revise. Edit timing, not representation, is the key target for future work.</p>
+      </div>
+      <div class="callout-card">
+        <div class="callout-title">Four contributions</div>
+        <ul class="bullets tight">
+          <li>Perturbation training (diffusion-style, over discrete edit inverses)</li>
+          <li>Active Context Refinement (marker + cursor heads)</li>
+          <li>Fused Chain-of-Edits RoPE kernel (FlashAttention-4 + CuTe-DSL)</li>
+          <li>Sequence parser (generation order &rarr; display order)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE 21 — THANK YOU -->
+  <!-- ============================================================ -->
+  <section class="slide title-slide">
+    <div class="kicker">Thank you</div>
+    <h1>Resources</h1>
+    <nav class="resource-links" aria-label="Project resources">
+      <a class="resource-link" href="https://github.com/AutodeskAILab/autoindexer/" target="_blank" rel="noopener noreferrer">
+        <span class="resource-icon resource-icon--github" aria-hidden="true">
+          <img src="assets/icons/github.svg" width="24" height="24" alt="">
+        </span>
+        <span class="resource-text">
+          <span class="resource-label">GitHub</span>
+          <span class="resource-url">github.com/AutodeskAILab/autoindexer</span>
+        </span>
+      </a>
+      <a class="resource-link" href="https://autodeskailab.github.io/autoindexer-demo/" target="_blank" rel="noopener noreferrer">
+        <span class="resource-icon resource-icon--web" aria-hidden="true">
+          <img src="assets/icons/globe.svg" width="24" height="24" alt="">
+        </span>
+        <span class="resource-text">
+          <span class="resource-label">Project page</span>
+          <span class="resource-url">autodeskailab.github.io/autoindexer-demo</span>
+        </span>
+      </a>
+      <a class="resource-link" href="https://openreview.net/forum?id=QxsLMneprg" target="_blank" rel="noopener noreferrer">
+        <span class="resource-icon resource-icon--openreview" aria-hidden="true">
+          <img src="assets/icons/document.svg" width="24" height="24" alt="">
+        </span>
+        <span class="resource-text">
+          <span class="resource-label">Workshop paper</span>
+          <span class="resource-url">NeurIPS 2026 Workshop</span>
+        </span>
+      </a>
+      <a class="resource-link" href="https://huggingface.co/collections/ADSKAILab/autoindexer" target="_blank" rel="noopener noreferrer">
+        <span class="resource-icon resource-icon--hf" aria-hidden="true">
+          <img src="assets/icons/huggingface.svg" width="24" height="24" alt="">
+        </span>
+        <span class="resource-text">
+          <span class="resource-label">Hugging Face</span>
+          <span class="resource-url">ADSKAILab/autoindexer collection</span>
+        </span>
+      </a>
+    </nav>
+    <p class="authors">shu.ishida@autodesk.com &nbsp;&middot;&nbsp; Autodesk Research</p>
+  </section>
+
+</div>
+
+<div id="nav">
+  <button id="prev-btn" aria-label="Previous slide">&larr;</button>
+  <span id="counter"></span>
+  <div id="dots"></div>
+  <button id="next-btn" aria-label="Next slide">&rarr;</button>
+</div>
+<div id="progress-bar"><div id="progress-fill"></div></div>
+
+<script src="js/slides.js"></script>
+</body>
+</html>
