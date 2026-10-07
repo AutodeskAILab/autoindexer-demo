@@ -137,7 +137,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 0.65rem;
-  padding: 0.55rem 0.9rem;
+  padding: 0.55rem 1.0rem 0.55rem 0.55rem;
   border-radius: 12px;
   border: 1px solid rgba(147, 197, 253, 0.35);
   background: rgba(15, 23, 42, 0.55);
